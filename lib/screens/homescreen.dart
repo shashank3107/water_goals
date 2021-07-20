@@ -70,8 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(40)),
                     color: Color.fromRGBO(217, 235, 235, 1),
                 ),
-                height: height * 42,
-                width: width * 70,
+                height: height *36.5,
+                width: width * 85,
                 
                 child: Form(
                   key: _formKey,
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     'Time Interval',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: height * 3,
+                      fontSize: height * 2.8,
                       color: const Color(0xFF707070),
                     ),),
                     SizedBox(height: height * 1,),
@@ -106,12 +106,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         _hrs = int.parse(quantity!);
                       },
                     ),
-                    SizedBox(height: height * 3,),
+                    SizedBox(height: height ,),
                     Text(
                     'Quantity',
                     style: TextStyle(
                       fontFamily: 'Segoe UI',
-                      fontSize: height * 3,
+                      fontSize: height * 2.8,
                       color: const Color(0xFF707070),
                     ),),
                     SizedBox(height: height * 1,),
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         _quantity = int.parse(quantity!);
                       },
                     ),
-                     SizedBox(height: height * 4),
+                     SizedBox(height: height  * 1.3),
                     Center(
                       child: ElevatedButton(onPressed: () async {
                          if(_formKey.currentState!.validate()){
@@ -159,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Color.fromRGBO(217, 235, 235, 1),
                 ),
                 height: height * 20,
-                width: width * 70,
+                width: width * 85,
                 child: Padding(
                   padding: EdgeInsets.all(height * 2.5),
                   child: Column(
@@ -175,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                       SizedBox(height: height * 2,),
                             Text(
-                      'Water Drunk: 23L',
+                      'Water Drunk: 23.46L',
                       style: TextStyle(
                         fontFamily: 'Segoe UI',
                         fontSize: height * 2.3,
@@ -185,7 +185,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(height: height * 1,),
 
       Text(
-                      'Drinking Rate: 6L/DAY',
+                      'Drinking Rate: 1.78L/DAY',
                       style: TextStyle(
                         fontFamily: 'Segoe UI',
                         fontSize: height * 2.3,
@@ -200,7 +200,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],),
                 ),),
 
-                SizedBox(height: 25,),
+                SizedBox(height: height * 3,),
+
+                Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(40)),
+                    color: Color.fromRGBO(217, 235, 235, 1),
+                ),
+                height: height * 3,
+                width: width * 85,
+                child: Text("  Next time to drink: 11:23 pm", 
+                 style: TextStyle(
+                      fontFamily: 'Segoe UI',
+                      fontSize: height * 2.3,
+                      color: Colors.red,
+                    ),),),
+
+                SizedBox(height: height * 3,),
 
                 Center(
                   child: Container(
@@ -209,7 +225,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.redAccent
                   ),
                   height: height * 8.5,
-                  width: width * 50,
+                  width: width * 70,
                   child: Center(child: Text("RESET DATA", style: TextStyle(
                         fontFamily: 'Segoe UI',
                         fontSize: height * 4,
